@@ -4,7 +4,7 @@
 #include "omp.h"
 
 #define  Max(a,b) ((a)>(b)?(a):(b))
-#define  N   (3000+2)
+#define  N   (256+2)
 double   maxeps = 0.1e-7;
 int itmax = 100;
 double w = 0.5;
