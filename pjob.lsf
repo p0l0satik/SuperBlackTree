@@ -1,0 +1,6 @@
+#BSUB -n 5
+#BSUB -W 00:15
+#BSUB -o mod1.%J.out
+#BSUB -e mod1.%J.err
+#BSUB -R "span[hosts=1]"
+OMP_NUM_THREADS=40 ./mod1
