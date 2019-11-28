@@ -61,7 +61,7 @@ void relax()
 	    for(int j = 1; j <= N - 2; j++){
 	        for(int i = 1 + ( k + j ) % 2; i <= N - 2; i += 2){ 
 		        double b;
-				#pragma omp ordered depend (sink: i - 1, j, k) depend (sink: i, j - 1, k) depend (sink: i, j, k - 1)
+				#pragma omp ordered depend (sink: k, i - 1, j) depend (sink: k, i, j - 1) depend (sink: k - 1, i, j)
 		        b = w * ( (A[i-1][j][k] + A[i+1][j][k] + A[i][j-1][k] + A[i][j+1][k]
 		            + A[i][j][k-1] + A[i][j][k+1] ) / 6. - A[i][j][k]);
 		        eps =  Max(fabs(b), eps);
@@ -73,7 +73,7 @@ void relax()
 	for(int k = 1; k <= N - 2; k++){
 	    for(int j = 1; j <= N - 2; j++){
 	        for(int i = 1 + (k + j + 1) % 2; i <= N - 2; i += 2){
-				#pragma omp ordered depend (sink: i - 1, j, k) depend (sink: i, j - 1, k) depend (sink: i, j, k - 1)
+				#pragma omp ordered depend (sink: k, i - 1, j) depend (sink: k, i, j - 1) depend (sink: k - 1, i, j)
 		        A[i][j][k] += w * ( (A[i - 1][j][k] + A[i + 1][j][k] + A[i][j - 1][k] + A[i][j + 1][k]
 		            + A[i][j][k - 1] + A[i][j][k + 1] ) / 6. - A[i][j][k]);
 	        }
