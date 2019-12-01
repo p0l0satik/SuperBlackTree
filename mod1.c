@@ -4,7 +4,7 @@
 #include "omp.h"
 
 #define  Max(a,b) ((a)>(b)?(a):(b))
-#define  N   (1024+2)
+#define  N   (512+2)
 double   maxeps = 0.1e-7;
 int itmax = 100;
 double w = 0.5;
@@ -51,9 +51,8 @@ void init()
 
 void relax()
 {
-	#pragma omp parallel shared(A)
-    {
-	#pragma omp for ordered(3) 
+	
+	#pragma omp parallel for ordered(3) shared(A)
 	for(int k = 1; k <= N - 2; k++){
 	    for(int j = 1; j <= N - 2; j++){
 	        for(int i = 1 + ( k + j ) % 2; i <= N - 2; i += 2){ 
@@ -67,7 +66,7 @@ void relax()
 	        }
         }
     }
-	#pragma omp for ordered(3)
+	#pragma omp parallel for ordered(3) shared(A)
 	for(int k = 1; k <= N - 2; k++){
 	    for(int j = 1; j <= N - 2; j++){
 	        for(int i = 1 + (k + j + 1) % 2; i <= N - 2; i += 2){
@@ -78,7 +77,6 @@ void relax()
 	        }
         }
     }
-	}
 
 
 }
