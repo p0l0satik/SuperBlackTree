@@ -19,7 +19,7 @@ void verify();
 int main(int an, char **as)
 {
 	/* int it */
-
+    double time = omp_get_wtime();
 	init();
 #
 	for(int it = 1; it <= itmax; it++)
@@ -31,7 +31,8 @@ int main(int an, char **as)
 	}
 
 	verify();
-
+    
+	printf("time = %f\n", omp_get_wtime()-time);
 	return 0;
 }
 
