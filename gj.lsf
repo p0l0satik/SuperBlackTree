@@ -1,0 +1,11 @@
+#BSUB -n 16
+#BSUB -W 00:15
+#BSUB -o v13.out
+#BSUB -e v13.err
+#BSUB -R "span[hosts=1]"
+OMP_NUM_THREADS=8 ./mod1
+OMP_NUM_THREADS=16 ./mod1
+OMP_NUM_THREADS=32 ./mod1
+OMP_NUM_THREADS=64 ./mod1
+OMP_NUM_THREADS=128 ./mod1
+OMP_NUM_THREADS=4 ./mod1
