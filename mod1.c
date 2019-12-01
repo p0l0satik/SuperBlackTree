@@ -89,6 +89,7 @@ void verify()
 	double s;
 
 	s = 0.;
+	#pragma omp parallel for reduction(+:s) 
 	for(int i = 0; i <= N - 1; i++){
 	    for(int j = 0; j <= N - 1; j++){
 	        for(int k = 0; k <= N - 1; k++){

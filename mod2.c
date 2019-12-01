@@ -68,7 +68,7 @@ void relax()
 	        }
         }
     }
-	#pragma omp  for 
+	#pragma omp for 
 	for(int k = 1; k <= N - 2; k++){
 	    for(int j = 1; j <= N - 2; j++){
 	        for(int i = 1 + (k + j + 1) % 2; i <= N - 2; i += 2){
@@ -89,6 +89,7 @@ void verify()
 	double s;
 
 	s = 0.;
+    #pragma omp parallel for reduction(+:s) 
 	for(int i = 0; i <= N - 1; i++){
 	    for(int j = 0; j <= N - 1; j++){
 	        for(int k = 0; k <= N - 1; k++){
