@@ -55,8 +55,8 @@ void init()
 
 void relax()
 {
-	
-	#pragma omp parallel for  shared(A)
+	#pragma omp parallel shared(A)
+	#pragma omp  for  
 	for(int k = 1; k <= N - 2; k++){
 	    for(int j = 1; j <= N - 2; j++){
 			int l = 1 + ( k + j ) % 2;
@@ -69,7 +69,7 @@ void relax()
 	        }
         }
     }
-	#pragma omp parallel for shared(A)
+	#pragma omp for 
 	for(int k = 1; k <= N - 2; k++){
 	    for(int j = 1; j <= N - 2; j++){
 			int l = 1 + (k + j + 1) % 2;
