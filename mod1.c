@@ -67,6 +67,7 @@ void relax()
 		            + A[i][j][k-1] + A[i][j][k+1] ) / 6. - A[i][j][k]);
 		        eps =  Max(fabs(b), eps);
 		        A[i][j][k] = A[i][j][k] + b;
+				#pragma omp ordered depend(source)
 	        }
         }
     }
@@ -78,6 +79,7 @@ void relax()
 				#pragma omp ordered depend (sink: k, j - 1) depend (sink: k - 1, j)
 		        A[i][j][k] += w * ( (A[i - 1][j][k] + A[i + 1][j][k] + A[i][j - 1][k] + A[i][j + 1][k]
 		            + A[i][j][k - 1] + A[i][j][k + 1] ) / 6. - A[i][j][k]);
+				#pragma omp ordered depend(source)
 	        }
         }
     }
