@@ -77,7 +77,7 @@ void relax()
 				#pragma omp ordered depend (sink: k, j, i - 1) depend (sink: k, j - 1, i) depend (sink: k - 1, j, i)
 		        A[i][j][k] += w * ( (A[i - 1][j][k] + A[i + 1][j][k] + A[i][j - 1][k] + A[i][j + 1][k]
 		            + A[i][j][k - 1] + A[i][j][k + 1] ) / 6. - A[i][j][k]);
-				#pragma omp ordered depend (source
+				#pragma omp ordered depend (source)
 	        }
         }
     }
