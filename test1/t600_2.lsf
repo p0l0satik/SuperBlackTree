@@ -1,0 +1,9 @@
+#BSUB -n 16
+#BSUB -W 00:15
+#BSUB -o t600_2.out
+#BSUB -e t600_2.err
+#BSUB -R "span[hosts=1]"
+OMP_NUM_THREADS=32 ./mod2_600
+OMP_NUM_THREADS=64 ./mod2_600
+OMP_NUM_THREADS=128 ./mod2_600
+

@@ -1,0 +1,9 @@
+#BSUB -n 20
+#BSUB -q normal
+#BSUB -W 00:25
+#BSUB -o t1800_2.out
+#BSUB -e t1800_2.err
+#BSUB -R "span[hosts=1]"
+OMP_NUM_THREADS=64 ./mod2_1800
+OMP_NUM_THREADS=128 ./mod2_1800
+OMP_NUM_THREADS=160 ./mod2_1800

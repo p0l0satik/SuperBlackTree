@@ -1,0 +1,9 @@
+#BSUB -n 16
+#BSUB -W 00:15
+#BSUB -o t512_1.out
+#BSUB -e t512_1.err
+#BSUB -R "span[hosts=1]"
+OMP_NUM_THREADS=16 ./mod1_512
+OMP_NUM_THREADS=32 ./mod1_512
+OMP_NUM_THREADS=64 ./mod1_512
+OMP_NUM_THREADS=128 ./mod1_512

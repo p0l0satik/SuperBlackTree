@@ -1,0 +1,16 @@
+#BSUB -n 20
+#BSUB -q normal
+#BSUB -W 03:00
+#BSUB -o test-full1000.out
+#BSUB -e test-full1000.err
+#BSUB -R "span[hosts=1]"
+
+
+OMP_NUM_THREADS=4 ./mod2_1000
+OMP_NUM_THREADS=8 ./mod2_1000
+OMP_NUM_THREADS=16 ./mod2_1000
+OMP_NUM_THREADS=32 ./mod2_1000
+OMP_NUM_THREADS=64 ./mod2_1000
+OMP_NUM_THREADS=128 ./mod2_1000
+OMP_NUM_THREADS=160 ./mod2_1000
+

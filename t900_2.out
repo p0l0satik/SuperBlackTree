@@ -1,0 +1,256 @@
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 502567: <#BSUB -n 20;#BSUB -q normal;#BSUB -W 00:25;#BSUB -o t900_2.out;#BSUB -e t900_2.err;#BSUB -R "span[hosts=1]";OMP_NUM_THREADS=32 ./mod2_900;OMP_NUM_THREADS=64 ./mod2_900;OMP_NUM_THREADS=128 ./mod2_900;OMP_NUM_THREADS=160 ./mod2_900> in cluster <MSUCluster> Exited
+
+Job <#BSUB -n 20;#BSUB -q normal;#BSUB -W 00:25;#BSUB -o t900_2.out;#BSUB -e t900_2.err;#BSUB -R "span[hosts=1]";OMP_NUM_THREADS=32 ./mod2_900;OMP_NUM_THREADS=64 ./mod2_900;OMP_NUM_THREADS=128 ./mod2_900;OMP_NUM_THREADS=160 ./mod2_900> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Tue Dec  3 12:55:15 2019
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Tue Dec  3 12:55:29 2019
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10> was used as the home directory.
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10/SuperBlackTree> was used as the working directory.
+Started at Tue Dec  3 12:55:29 2019
+Terminated at Tue Dec  3 13:20:36 2019
+Results reported at Tue Dec  3 13:20:36 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -n 20
+#BSUB -q normal
+#BSUB -W 00:25
+#BSUB -o t900_2.out
+#BSUB -e t900_2.err
+#BSUB -R "span[hosts=1]"
+OMP_NUM_THREADS=32 ./mod2_900
+OMP_NUM_THREADS=64 ./mod2_900
+OMP_NUM_THREADS=128 ./mod2_900
+OMP_NUM_THREADS=160 ./mod2_900
+
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   104957.00 sec.
+    Max Memory :                                 5608 MB
+    Average Memory :                             5552.50 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                132
+    Run time :                                   1507 sec.
+    Turnaround time :                            1521 sec.
+
+The output (if any) follows:
+
+it=   1   eps=451.333333
+it=   2   eps=394.317130
+it=   3   eps=317.543740
+it=   4   eps=249.860973
+it=   5   eps=196.332819
+it=   6   eps=156.152293
+it=   7   eps=147.851521
+it=   8   eps=137.350071
+it=   9   eps=126.081570
+it=  10   eps=114.895571
+it=  11   eps=104.263271
+it=  12   eps=94.418193
+it=  13   eps=85.449581
+it=  14   eps=77.533548
+it=  15   eps=73.350473
+it=  16   eps=69.242726
+it=  17   eps=65.268896
+it=  18   eps=61.465944
+it=  19   eps=57.855201
+it=  20   eps=54.761716
+it=  21   eps=53.014739
+it=  22   eps=51.230461
+it=  23   eps=49.434692
+it=  24   eps=47.647478
+it=  25   eps=45.884164
+it=  26   eps=44.156286
+it=  27   eps=42.472318
+it=  28   eps=40.838281
+it=  29   eps=39.258253
+it=  30   eps=37.926130
+it=  31   eps=37.093894
+it=  32   eps=36.245283
+it=  33   eps=35.387253
+it=  34   eps=34.525648
+it=  35   eps=33.665349
+it=  36   eps=32.810401
+it=  37   eps=31.964129
+it=  38   eps=31.129246
+it=  39   eps=30.307935
+it=  40   eps=29.501929
+it=  41   eps=28.712580
+it=  42   eps=27.940914
+it=  43   eps=27.187684
+it=  44   eps=26.453412
+it=  45   eps=25.738425
+it=  46   eps=25.187603
+it=  47   eps=24.707936
+it=  48   eps=24.231742
+it=  49   eps=23.759927
+it=  50   eps=23.293259
+it=  51   eps=22.832392
+it=  52   eps=22.377872
+it=  53   eps=21.930153
+it=  54   eps=21.489608
+it=  55   eps=21.056537
+it=  56   eps=20.631176
+it=  57   eps=20.316526
+it=  58   eps=20.028513
+it=  59   eps=19.740753
+it=  60   eps=19.453720
+it=  61   eps=19.167841
+it=  62   eps=18.883493
+it=  63   eps=18.601014
+it=  64   eps=18.320700
+it=  65   eps=18.042813
+it=  66   eps=17.767582
+it=  67   eps=17.495208
+it=  68   eps=17.225865
+it=  69   eps=16.959703
+it=  70   eps=16.696849
+it=  71   eps=16.437411
+it=  72   eps=16.247581
+it=  73   eps=16.068450
+it=  74   eps=15.889141
+it=  75   eps=15.709868
+it=  76   eps=15.530825
+it=  77   eps=15.352193
+it=  78   eps=15.174132
+it=  79   eps=14.996794
+it=  80   eps=14.820313
+it=  81   eps=14.644811
+it=  82   eps=14.470402
+it=  83   eps=14.297184
+it=  84   eps=14.125249
+it=  85   eps=13.954679
+it=  86   eps=13.785546
+it=  87   eps=13.617915
+it=  88   eps=13.451845
+it=  89   eps=13.287386
+it=  90   eps=13.124583
+it=  91   eps=12.963474
+it=  92   eps=12.804095
+it=  93   eps=12.646472
+it=  94   eps=12.490630
+it=  95   eps=12.350598
+it=  96   eps=12.232653
+it=  97   eps=12.115177
+it=  98   eps=11.998223
+it=  99   eps=11.881843
+it= 100   eps=11.766083
+  S = 160770296858.162872
+time = 572.521888
+it=   1   eps=451.333333
+it=   2   eps=394.317130
+it=   3   eps=317.543740
+it=   4   eps=249.860973
+it=   5   eps=196.332819
+it=   6   eps=156.152293
+it=   7   eps=147.851521
+it=   8   eps=137.350071
+it=   9   eps=126.081570
+it=  10   eps=114.895571
+it=  11   eps=104.263271
+it=  12   eps=94.418193
+it=  13   eps=85.449581
+it=  14   eps=77.533548
+it=  15   eps=73.350473
+it=  16   eps=69.242726
+it=  17   eps=65.268896
+it=  18   eps=61.465944
+it=  19   eps=57.855201
+it=  20   eps=54.761716
+it=  21   eps=53.014739
+it=  22   eps=51.230461
+it=  23   eps=49.434692
+it=  24   eps=47.647478
+it=  25   eps=45.884164
+it=  26   eps=44.156286
+it=  27   eps=42.472318
+it=  28   eps=40.838281
+it=  29   eps=39.258253
+it=  30   eps=37.926130
+it=  31   eps=37.093894
+it=  32   eps=36.245283
+it=  33   eps=35.387253
+it=  34   eps=34.525648
+it=  35   eps=33.665349
+it=  36   eps=32.810401
+it=  37   eps=31.964129
+it=  38   eps=31.129246
+it=  39   eps=30.307935
+it=  40   eps=29.501929
+it=  41   eps=28.712580
+it=  42   eps=27.940914
+it=  43   eps=27.187684
+it=  44   eps=26.453412
+it=  45   eps=25.738425
+it=  46   eps=25.187603
+it=  47   eps=24.707936
+it=  48   eps=24.231742
+it=  49   eps=23.759927
+it=  50   eps=23.293259
+it=  51   eps=22.832392
+it=  52   eps=22.377872
+it=  53   eps=21.930153
+it=  54   eps=21.489608
+it=  55   eps=21.056537
+it=  56   eps=20.631176
+it=  57   eps=20.316526
+it=  58   eps=20.028513
+it=  59   eps=19.740753
+it=  60   eps=19.453720
+it=  61   eps=19.167841
+it=  62   eps=18.883493
+it=  63   eps=18.601014
+it=  64   eps=18.320700
+it=  65   eps=18.042813
+it=  66   eps=17.767582
+it=  67   eps=17.495208
+it=  68   eps=17.225865
+it=  69   eps=16.959703
+it=  70   eps=16.696849
+it=  71   eps=16.437411
+it=  72   eps=16.247581
+it=  73   eps=16.068450
+it=  74   eps=15.889141
+it=  75   eps=15.709868
+it=  76   eps=15.530825
+it=  77   eps=15.352193
+it=  78   eps=15.174132
+it=  79   eps=14.996794
+it=  80   eps=14.820313
+it=  81   eps=14.644811
+it=  82   eps=14.470402
+it=  83   eps=14.297184
+it=  84   eps=14.125249
+it=  85   eps=13.954679
+it=  86   eps=13.785546
+it=  87   eps=13.617915
+it=  88   eps=13.451845
+it=  89   eps=13.287386
+it=  90   eps=13.124583
+it=  91   eps=12.963474
+it=  92   eps=12.804095
+it=  93   eps=12.646472
+it=  94   eps=12.490630
+it=  95   eps=12.350598
+it=  96   eps=12.232653
+it=  97   eps=12.115177
+it=  98   eps=11.998223
+it=  99   eps=11.881843
+it= 100   eps=11.766083
+  S = 160770296858.162872
+time = 510.322018
+
+
+PS:
+
+Read file <t900_2.err> for stderr output of this job.
+
