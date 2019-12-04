@@ -1,0 +1,51 @@
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 502571: <#BSUB -n 20;#BSUB -q normal;#BSUB -W 00:25;#BSUB -o t1400_2.out;#BSUB -e t1400_2.err;#BSUB -R "span[hosts=1]";OMP_NUM_THREADS=64 ./mod2_1400;OMP_NUM_THREADS=128 ./mod2_1400;OMP_NUM_THREADS=160 ./mod2_1400> in cluster <MSUCluster> Exited
+
+Job <#BSUB -n 20;#BSUB -q normal;#BSUB -W 00:25;#BSUB -o t1400_2.out;#BSUB -e t1400_2.err;#BSUB -R "span[hosts=1]";OMP_NUM_THREADS=64 ./mod2_1400;OMP_NUM_THREADS=128 ./mod2_1400;OMP_NUM_THREADS=160 ./mod2_1400> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Tue Dec  3 13:03:38 2019
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Tue Dec  3 13:20:36 2019
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10> was used as the home directory.
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10/SuperBlackTree> was used as the working directory.
+Started at Tue Dec  3 13:20:36 2019
+Terminated at Tue Dec  3 13:45:40 2019
+Results reported at Tue Dec  3 13:45:40 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -n 20
+#BSUB -q normal
+#BSUB -W 00:25
+#BSUB -o t1400_2.out
+#BSUB -e t1400_2.err
+#BSUB -R "span[hosts=1]"
+OMP_NUM_THREADS=64 ./mod2_1400
+OMP_NUM_THREADS=128 ./mod2_1400
+OMP_NUM_THREADS=160 ./mod2_1400
+
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   96203.00 sec.
+    Max Memory :                                 21008 MB
+    Average Memory :                             20860.14 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                68
+    Run time :                                   1504 sec.
+    Turnaround time :                            2522 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <t1400_2.err> for stderr output of this job.
+

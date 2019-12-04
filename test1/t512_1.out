@@ -1,0 +1,153 @@
+Sender: LSF System <lsfadmin@polus-c2-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 498928: <#BSUB -n 16;#BSUB -W 00:15;#BSUB -o t512_1.out;#BSUB -e t512_1.err;#BSUB -R "span[hosts=1]";OMP_NUM_THREADS=16 ./mod1;OMP_NUM_THREADS=32 ./mod1;OMP_NUM_THREADS=64 ./mod1;OMP_NUM_THREADS=128 ./mod1> in cluster <MSUCluster> Exited
+
+Job <#BSUB -n 16;#BSUB -W 00:15;#BSUB -o t512_1.out;#BSUB -e t512_1.err;#BSUB -R "span[hosts=1]";OMP_NUM_THREADS=16 ./mod1;OMP_NUM_THREADS=32 ./mod1;OMP_NUM_THREADS=64 ./mod1;OMP_NUM_THREADS=128 ./mod1> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Mon Dec  2 00:31:17 2019
+Job was executed on host(s) <16*polus-c2-ib.bmc.hpc.cs.msu.ru>, in queue <short>, as user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Mon Dec  2 00:31:53 2019
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10> was used as the home directory.
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10/SuperBlackTree> was used as the working directory.
+Started at Mon Dec  2 00:31:53 2019
+Terminated at Mon Dec  2 00:46:54 2019
+Results reported at Mon Dec  2 00:46:54 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -n 16
+#BSUB -W 00:15
+#BSUB -o t512_1.out
+#BSUB -e t512_1.err
+#BSUB -R "span[hosts=1]"
+OMP_NUM_THREADS=16 ./mod1
+OMP_NUM_THREADS=32 ./mod1
+OMP_NUM_THREADS=64 ./mod1
+OMP_NUM_THREADS=128 ./mod1
+
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   17890.00 sec.
+    Max Memory :                                 1041 MB
+    Average Memory :                             1031.21 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                36
+    Run time :                                   901 sec.
+    Turnaround time :                            937 sec.
+
+The output (if any) follows:
+
+it=   1   eps=257.333333
+it=   2   eps=224.567130
+it=   3   eps=180.838108
+it=   4   eps=142.288242
+it=   5   eps=111.801162
+it=   6   eps=88.899065
+it=   7   eps=84.170657
+it=   8   eps=78.189681
+it=   9   eps=71.772405
+it=  10   eps=65.402501
+it=  11   eps=59.348197
+it=  12   eps=53.742394
+it=  13   eps=48.635845
+it=  14   eps=44.117165
+it=  15   eps=41.735994
+it=  16   eps=39.397772
+it=  17   eps=37.135840
+it=  18   eps=34.971229
+it=  19   eps=32.916073
+it=  20   eps=31.147805
+it=  21   eps=30.153560
+it=  22   eps=29.138129
+it=  23   eps=28.116196
+it=  24   eps=27.099164
+it=  25   eps=26.095763
+it=  26   eps=25.112552
+it=  27   eps=24.154352
+it=  28   eps=23.224585
+it=  29   eps=22.325568
+it=  30   eps=21.563094
+it=  31   eps=21.089547
+it=  32   eps=20.606706
+it=  33   eps=20.118526
+it=  34   eps=19.628331
+it=  35   eps=19.138895
+it=  36   eps=18.652517
+it=  37   eps=18.171089
+it=  38   eps=17.696153
+it=  39   eps=17.228948
+it=  40   eps=16.770462
+it=  41   eps=16.321460
+it=  42   eps=15.882526
+it=  43   eps=15.454089
+it=  44   eps=15.036443
+it=  45   eps=14.629774
+it=  46   eps=14.312972
+it=  47   eps=14.040188
+it=  48   eps=13.769386
+it=  49   eps=13.501079
+it=  50   eps=13.235705
+it=  51   eps=12.973635
+it=  52   eps=12.715179
+it=  53   eps=12.460595
+it=  54   eps=12.210095
+it=  55   eps=11.963848
+it=  56   eps=11.721990
+it=  57   eps=11.540381
+it=  58   eps=11.376631
+it=  59   eps=11.213028
+it=  60   eps=11.049843
+it=  61   eps=10.887317
+it=  62   eps=10.725665
+it=  63   eps=10.565078
+it=  64   eps=10.405725
+it=  65   eps=10.247755
+it=  66   eps=10.091297
+it=  67   eps=9.936467
+it=  68   eps=9.783361
+it=  69   eps=9.632066
+it=  70   eps=9.482654
+it=  71   eps=9.335187
+it=  72   eps=9.225285
+it=  73   eps=9.123465
+it=  74   eps=9.021546
+it=  75   eps=8.919650
+it=  76   eps=8.817887
+it=  77   eps=8.716360
+it=  78   eps=8.615160
+it=  79   eps=8.514372
+it=  80   eps=8.414073
+it=  81   eps=8.314333
+it=  82   eps=8.215214
+it=  83   eps=8.116776
+it=  84   eps=8.019067
+it=  85   eps=7.922136
+it=  86   eps=7.826023
+it=  87   eps=7.730766
+it=  88   eps=7.636397
+it=  89   eps=7.542944
+it=  90   eps=7.450434
+it=  91   eps=7.358888
+it=  92   eps=7.268326
+it=  93   eps=7.178764
+it=  94   eps=7.090214
+it=  95   eps=7.008973
+it=  96   eps=6.941964
+it=  97   eps=6.875223
+it=  98   eps=6.808779
+it=  99   eps=6.742663
+it= 100   eps=6.676899
+  S = 16583514003.199028
+time = 681.698073
+
+
+PS:
+
+Read file <t512_1.err> for stderr output of this job.
+
