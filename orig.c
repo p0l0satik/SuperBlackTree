@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #define  Max(a,b) ((a)>(b)?(a):(b))
-#define  N   (512+2)
+#define  N   (16+2)
 double   maxeps = 0.1e-7;
 int itmax = 100;
 int i, j, k;
@@ -37,43 +37,45 @@ int main(int an, char **as)
 
 void init()
 { 
-	for(k = 0; k <= N - 1; k++){
-	    for(j = 0; j <= N - 1; j++){
-	        for(i = 0; i <= N - 1; i++){
-		        if(i == 0 || i == N - 1 || j == 0 || j == N - 1 || k == 0 || k == N - 1){
-                    A[i][j][k]= 0.;
-                }
-		        else{ 
-                    A[i][j][k]= (4. + i + j + k);
-                }
+	for(k = 1; k < N - 1; k++){
+	    for(j = 1; j <= N - 2; j++){
+	        for(i = 1; i <= N - 2; i++){
+                    A[k][j][i]= (4. + i + j + k);
+                
 	        }
         }
     }
+	// if (myrank == r) {
+        
+    // }
+
 } 
 
 
 void relax()
 {
 
-	for(k = 1; k <= N - 2; k++){
+	for(k = 1; k <= N -2; k++){
 	    for(j = 1; j <= N - 2; j++){
 	        for(i = 1 + ( k + j ) % 2; i <= N - 2; i += 2){ 
 		        double b;
-		        b = w * ( (A[i-1][j][k] + A[i+1][j][k] + A[i][j-1][k] + A[i][j+1][k]
-		            + A[i][j][k-1] + A[i][j][k+1] ) / 6. - A[i][j][k]);
-		        eps =  Max(fabs(b), eps);
-		        A[i][j][k] = A[i][j][k] + b;
+		        b = w * ( (A[k][j][i-1] + A[k][j][i+1] + A[k][j-1][i] + A[k][j+1][i]
+		            + A[k-1][j][i] + A[k+1][j][i] ) / 6. - 1*A[k][j][i] );
+		        // printf("%f \n", b);
+                eps =  Max(fabs(b), eps);
+		        A[k][j][i] = A[k][j][i] + b;
 	        }
         }
+
     }
 
 	for(k = 1; k <= N - 2; k++){
 	    for(j = 1; j <= N - 2; j++){
 	        for(i = 1 + (k + j + 1) % 2; i <= N - 2; i += 2){
 		        double b;
-		        b = w * ( (A[i - 1][j][k] + A[i + 1][j][k] + A[i][j - 1][k] + A[i][j + 1][k]
-		            + A[i][j][k - 1] + A[i][j][k + 1] ) / 6. - A[i][j][k]);
-		        A[i][j][k] = A[i][j][k] + b;
+		        b = w * ( (A[k][j][i-1] + A[k][j][i+1] + A[k][j-1][i] + A[k][j+1][i]
+		            + A[k-1][j][i] + A[k+1][j][i] ) / 6. -A[k][j][i]);
+		        A[k][j][i] = A[k][j][i] + b;
 	        }
         }
     }
@@ -88,12 +90,22 @@ void verify()
 
 	s = 0.;
 	for(k=0; k<=N-1; k++){
-	    for(j=0; j<=N-1; j++){
+	    for(j=0; j<=N - 1; j++){
 	        for(i=0; i<=N-1; i++){
-		        s = s + A[i][j][k] * (i + 1) * (j + 1) * (k + 1) / (N * N * N);
+		        s = s + A[k][j][i] * (i + 1) * (j + 1) * (k + 1) / (N * N * N);
 	        }
         }
     }
+	// for(int k = 0; k <= N  - 1; k++){
+    //         for(int j = 0; j <= N - 1; j++){
+    //             for(int i = 0; i <=  N - 1; i++){ 
+    //                 printf("%f ", A[k][j][i]);
+    //             }
+    //             printf("\n");
+    //         }
+    //         printf("\n");
+    //         printf("\n");
+    //     }
 	printf("  S = %f\n",s);
 
 }
