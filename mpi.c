@@ -37,7 +37,6 @@ int main(int an, char **as)
     
     if (myrank == 0){
         add = 0;
-        // beg += 1;
     } else {
         add =  startrow - 1;
         if (myrank != ranksize -1){
@@ -50,10 +49,8 @@ int main(int an, char **as)
 	init();
 	for(int it = 1; it <= itmax; it++)
 	{
-		// eps = 0.;
         red_eps = 0.;
 		eps = relax();
-        // printf("%f \n", eps);
         MPI_Allreduce(&eps, &red_eps, 1, MPI_DOUBLE, MPI_MAX, MPI_COMM_WORLD);
         if (myrank == 0){
             printf("it=%4i   eps=%f\n", it, red_eps);
@@ -64,7 +61,6 @@ int main(int an, char **as)
 	}
 
 	s = verify();
-        // printf("rk%d  S = %f\n", myrank, s);
 
     MPI_Reduce(&s, &red_s, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
     if (myrank == 0){
@@ -77,8 +73,6 @@ int main(int an, char **as)
 
 void init()
 { 
-    // A[3][10][10];
-    // printf("fff \n");  
 	for(int k = beg; k < nrow; k++){
 	    for(int j = 1; j < N - 1; j++){
 	        for(int i = 1; i <  N - 1; i++){ 
@@ -91,23 +85,19 @@ void init()
 	        }
         }
     }
-    
-    
-    // printf("vishel \n");
+
 } 
 
 
 double relax()
 {
-    // printf("rank =%d  rs%d\n", myrank, ranksize);
     double eps = .0;
     if (myrank != 0){
-        // printf("%dA \n", myrank);
         MPI_Irecv(&A[0][0][0], N * N, MPI_DOUBLE, myrank - 1, 1215, MPI_COMM_WORLD, &req[0]);
         MPI_Isend(&A[1][0][0], N * N, MPI_DOUBLE, myrank - 1, 1216, MPI_COMM_WORLD, &req[1]);
     }
     if (myrank != ranksize - 1){
-        // printf("%dB \n", myrank);
+
         MPI_Isend(&A[nrow - 1][0][0], N * N, MPI_DOUBLE, myrank + 1, 1215, MPI_COMM_WORLD, &req[2]);
         MPI_Irecv(&A[nrow][0][0], N * N, MPI_DOUBLE, myrank + 1, 1216, MPI_COMM_WORLD, &req[3]);
     }
@@ -119,38 +109,17 @@ double relax()
     if (myrank == ranksize - 1) ll = 2;
     MPI_Waitall(ll, &req[sh], &status[0]);
 
-
-    //  if (myrank == r) {
-    //     for(int k = 0; k < nrow +1; k++){
-    //         for(int j = 0; j <=  N - 1; j++){
-    //             for(int i = 0; i <=  N - 1; i++){ 
-    //                 printf("%8.2f ", A[k][j][i]);
-    //             }
-    //             printf("\n");
-    //         }
-    //         printf("\n");
-    //         printf("\n");
-    //     }
-    // }
-    // printf("\n");
-
-    
-
 	for(int k = beg; k < nrow; k++){
 	    for(int j = 1; j <= N - 2; j++){
 	        for(int i = 1 + ( k + add + j ) % 2; i <= N - 2; i += 2){ 
 		        double b;
 		        b = w * ((A[k][j][i-1] + A[k][j][i+1] + A[k][j-1][i] + A[k][j+1][i]
 		            + A[k-1][j][i] + A[k+1][j][i] ) / 6. - A[k][j][i]);
-                // if (myrank == r) {
-                    // printf(" rk:%d b = %f\n", myrank, b);
-                // }
 		        eps =  Max(fabs(b), eps);
 		        A[k][j][i] = A[k][j][i] + b;
 	        }
         }
     }
-    // printf("ffddddf");
     if (myrank != 0){
         MPI_Irecv(&A[0][0][0], N * N, MPI_DOUBLE, myrank - 1, 1215, MPI_COMM_WORLD, &req[0]);
         MPI_Isend(&A[1][0][0], N * N, MPI_DOUBLE, myrank - 1, 1216, MPI_COMM_WORLD, &req[1]);
@@ -191,9 +160,6 @@ double verify()
 	        }
         }
     }
-    
-   
-    // printf("  localS = %f\n", s);
     return s;
 
 }
