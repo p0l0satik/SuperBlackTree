@@ -88,7 +88,7 @@ void init()
 
 double relax()
 {
-    printf("rank =%d \n", myrank);
+    printf("rank =%d  rs%d\n", myrank, ranksize);
     double eps = .0;
     if (myrank != 0){
         printf("%dA \n", myrank);
