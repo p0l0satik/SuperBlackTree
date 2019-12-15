@@ -95,7 +95,7 @@ double relax()
         MPI_Irecv(&A[0][0][0], N * N, MPI_DOUBLE, myrank - 1, 1215, MPI_COMM_WORLD, &req[0]);
         MPI_Isend(&A[1][0][0], N * N, MPI_DOUBLE, myrank - 1, 1216, MPI_COMM_WORLD, &req[1]);
     }
-    if (myrank != 3){
+    if (myrank != ranksize - 1){
         printf("%dB \n", myrank);
         MPI_Isend(&A[nrow - 1][0][0], N * N, MPI_DOUBLE, myrank + 1, 1215, MPI_COMM_WORLD, &req[2]);
         MPI_Irecv(&A[nrow][0][0], N * N, MPI_DOUBLE, myrank + 1, 1216, MPI_COMM_WORLD, &req[3]);
@@ -105,7 +105,7 @@ double relax()
         sh = 2;
         ll = 2;
     }
-    if (myrank == 3) ll = 2;
+    if (myrank == ranksize - 1) ll = 2;
     MPI_Status st;
     MPI_Waitall(ll, &req[sh], &st);
 
