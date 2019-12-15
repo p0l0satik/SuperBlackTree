@@ -31,7 +31,10 @@ int main(int an, char **as)
     startrow = (myrank * N) / ranksize;
     lastrow = ((myrank + 1) * N) / ranksize - 1;
     nrow = lastrow - startrow + 1;
-    A = malloc((nrow + 2) * N * N * sizeof(double));
+    A = malloc((nrow + 2)*sizeof(*double));
+    for (int i = 0; i < nrow + 2; ++i){
+        A[i] = malloc((nrow + 2)*sizeof(double));
+    }
     printf("rk:%d, st:%d, ls%d, nr%d \n", myrank, startrow, lastrow,nrow);
     if (myrank == 0){
         add = 0;
@@ -106,8 +109,7 @@ double relax()
         ll = 2;
     }
     if (myrank == ranksize - 1) ll = 2;
-    MPI_Status st;
-    MPI_Waitall(ll, &req[sh], &st);
+    MPI_Waitall(ll, &req[sh], &status[0]);
 
     
 
