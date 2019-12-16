@@ -7,7 +7,7 @@
 
 #define  Max(a,b) ((a)>(b)?(a):(b))
 #define  Min(a,b) ((a)<(b)?(a):(b))
-#define  N   (128)
+#define  N   (600)
 #define  r 2
 double   maxeps = 0.1e-7;
 int itmax = 100;
@@ -168,4 +168,5 @@ double verify()
     return s;
 
 }
+
 

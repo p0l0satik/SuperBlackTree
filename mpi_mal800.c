@@ -7,7 +7,7 @@
 
 #define  Max(a,b) ((a)>(b)?(a):(b))
 #define  Min(a,b) ((a)<(b)?(a):(b))
-#define  N   (128)
+#define  N   (800)
 #define  r 2
 double   maxeps = 0.1e-7;
 int itmax = 100;
@@ -15,7 +15,7 @@ int itmax = 100;
 double w = 0.5;
 
 int myrank, ranksize, startrow, lastrow, nrow, add, beg = 1;
-double A[N][N][N];
+double ***A;
 
 double relax();
 void init();
@@ -34,6 +34,18 @@ int main(int an, char **as)
     startrow = (myrank * N) / ranksize;
     lastrow = ((myrank + 1) * N) / ranksize - 1;
     nrow = lastrow - startrow + 1;
+
+    A = (double***)malloc((nrow + 2) * sizeof(double**));
+
+	for (int i = 0; i < nrow + 2; i++)
+	{
+		A[i] = (double**)malloc(N * sizeof(double*));
+		for (int j = 0; j < N; j++)
+		{
+			A[i][j] = (double*)malloc(N * sizeof(double));
+		}
+	}
+
     if (myrank == 0){
         add = 0;
     } else {
@@ -165,7 +177,9 @@ double verify()
 	        }
         }
     }
+    // printf("%f", s);
     return s;
 
 }
+
 
