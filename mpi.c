@@ -33,8 +33,6 @@ int main(int an, char **as)
     startrow = (myrank * N) / ranksize;
     lastrow = ((myrank + 1) * N) / ranksize - 1;
     nrow = lastrow - startrow + 1;
-    // A = malloc((nrow + 2)*sizeof(double*));
-    
     if (myrank == 0){
         add = 0;
     } else {
