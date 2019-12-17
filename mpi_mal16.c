@@ -7,14 +7,14 @@
 
 #define  Max(a,b) ((a)>(b)?(a):(b))
 #define  Min(a,b) ((a)<(b)?(a):(b))
-#define  N   (16)
+#define  N   (128)
 #define  r 2
 double   maxeps = 0.1e-7;
 int itmax = 100;
 
 double w = 0.5;
 
-int myrank, ranksize, startrow, lastrow, nrow, add, beg = 1;
+int myrank, ranksize, startrow, lastrow, nrow, nrow_stor,  add, beg = 1;
 double ***A;
 
 double relax();
@@ -34,7 +34,7 @@ int main(int an, char **as)
     startrow = (myrank * N) / ranksize;
     lastrow = ((myrank + 1) * N) / ranksize - 1;
     nrow = lastrow - startrow + 1;
-
+    nrow_stor = nrow;
     A = (double***)malloc((nrow + 2) * sizeof(double**));
 
 	for (int i = 0; i < nrow + 2; i++)
@@ -83,6 +83,15 @@ int main(int an, char **as)
     if (myrank == 0 ) {
         printf( "Total time spent in seconds id %f\n", totalTime );
     }
+    for (int i = 0; i < nrow_stor + 2; i++)
+	{
+		for (int j = 0; j < N; j++)
+		{
+			free(A[i][j]);
+		}
+        free(A[i]);
+	}
+    free(A);
     MPI_Finalize();
 	return 0;
 }
