@@ -71,6 +71,8 @@ int main(int an, char **as)
     if (myrank == 0 ) {
         printf( "Total time spent in seconds id %f\n", totalTime );
     }
+
+    
     MPI_Finalize();
 	return 0;
 }
