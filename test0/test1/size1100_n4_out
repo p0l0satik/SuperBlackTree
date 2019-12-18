@@ -1,0 +1,147 @@
+Sender: LSF System <lsfadmin@polus-c2-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 531950: <mpiexec ./test1size1100> in cluster <MSUCluster> Done
+
+Job <mpiexec ./test1size1100> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Wed Dec 18 08:57:11 2019
+Job was executed on host(s) <4*polus-c2-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Wed Dec 18 12:01:05 2019
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10> was used as the home directory.
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10/SuperBlackTree/test0/test1> was used as the working directory.
+Started at Wed Dec 18 12:01:05 2019
+Terminated at Wed Dec 18 12:14:06 2019
+Results reported at Wed Dec 18 12:14:06 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpiexec ./test1size1100
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   3121.00 sec.
+    Max Memory :                                 10417 MB
+    Average Memory :                             10318.74 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              7
+    Max Threads :                                20
+    Run time :                                   783 sec.
+    Turnaround time :                            11815 sec.
+
+The output (if any) follows:
+
+rk:0, st:0, ls274, nr275 
+rk:1, st:275, ls549, nr276 
+rk:2, st:550, ls824, nr276 
+rk:3, st:825, ls1099, nr275 
+it=   1   eps=550.333333
+it=   2   eps=480.942130
+it=   3   eps=387.305893
+it=   4   eps=304.756336
+it=   5   eps=239.470107
+it=   6   eps=190.472239
+it=   7   eps=180.348457
+it=   8   eps=167.540166
+it=   9   eps=153.796041
+it=  10   eps=140.152344
+it=  11   eps=127.183849
+it=  12   eps=115.175431
+it=  13   eps=104.235972
+it=  14   eps=94.586239
+it=  15   eps=89.483636
+it=  16   eps=84.472884
+it=  17   eps=79.625455
+it=  18   eps=74.986443
+it=  19   eps=70.581869
+it=  20   eps=66.812114
+it=  21   eps=64.681010
+it=  22   eps=62.504383
+it=  23   eps=60.313718
+it=  24   eps=58.133473
+it=  25   eps=55.982368
+it=  26   eps=53.874481
+it=  27   eps=51.820146
+it=  28   eps=49.826714
+it=  29   eps=47.899159
+it=  30   eps=46.276340
+it=  31   eps=45.261060
+it=  32   eps=44.225793
+it=  33   eps=43.179025
+it=  34   eps=42.127888
+it=  35   eps=41.078334
+it=  36   eps=40.035300
+it=  37   eps=39.002846
+it=  38   eps=37.984278
+it=  39   eps=36.982263
+it=  40   eps=35.998915
+it=  41   eps=35.035883
+it=  42   eps=34.094420
+it=  43   eps=33.175446
+it=  44   eps=32.279597
+it=  45   eps=31.407273
+it=  46   eps=30.737029
+it=  47   eps=30.151786
+it=  48   eps=29.570780
+it=  49   eps=28.995112
+it=  50   eps=28.425722
+it=  51   eps=27.863407
+it=  52   eps=27.308834
+it=  53   eps=26.762557
+it=  54   eps=26.225030
+it=  55   eps=25.696621
+it=  56   eps=25.177616
+it=  57   eps=24.795074
+it=  58   eps=24.443649
+it=  59   eps=24.092529
+it=  60   eps=23.742296
+it=  61   eps=23.393469
+it=  62   eps=23.046509
+it=  63   eps=22.701827
+it=  64   eps=22.359785
+it=  65   eps=22.020703
+it=  66   eps=21.684862
+it=  67   eps=21.352505
+it=  68   eps=21.023844
+it=  69   eps=20.699064
+it=  70   eps=20.378319
+it=  71   eps=20.061742
+it=  72   eps=19.831124
+it=  73   eps=19.612541
+it=  74   eps=19.393739
+it=  75   eps=19.174979
+it=  76   eps=18.956500
+it=  77   eps=18.738520
+it=  78   eps=18.521237
+it=  79   eps=18.304834
+it=  80   eps=18.089477
+it=  81   eps=17.875314
+it=  82   eps=17.662482
+it=  83   eps=17.451104
+it=  84   eps=17.241290
+it=  85   eps=17.033141
+it=  86   eps=16.826745
+it=  87   eps=16.622182
+it=  88   eps=16.419522
+it=  89   eps=16.218828
+it=  90   eps=16.020153
+it=  91   eps=15.823547
+it=  92   eps=15.629049
+it=  93   eps=15.436694
+it=  94   eps=15.246513
+it=  95   eps=15.076479
+it=  96   eps=14.932541
+it=  97   eps=14.789174
+it=  98   eps=14.646445
+it=  99   eps=14.504415
+it= 100   eps=14.363141
+  S = 357453446852.845154
+Total time spent in seconds id 780.030494
+
+
+PS:
+
+Read file <n4_er_size1100> for stderr output of this job.
+

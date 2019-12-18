@@ -1,0 +1,152 @@
+Sender: LSF System <lsfadmin@polus-c2-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 530939: <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skpod19-321-10 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 2;#BSUB -W 00:15;#BSUB -o size32_n2_out;#BSUB -e n2_er_size32;OMP_NUM_THREADS=1 mpiexec test0size32> in cluster <MSUCluster> Done
+
+Job <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skpod19-321-10 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 2;#BSUB -W 00:15;#BSUB -o size32_n2_out;#BSUB -e n2_er_size32;OMP_NUM_THREADS=1 mpiexec test0size32> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Tue Dec 17 23:10:14 2019
+Job was executed on host(s) <2*polus-c2-ib.bmc.hpc.cs.msu.ru>, in queue <short>, as user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Tue Dec 17 23:10:15 2019
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10> was used as the home directory.
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10/SuperBlackTree/test0> was used as the working directory.
+Started at Tue Dec 17 23:10:15 2019
+Terminated at Tue Dec 17 23:10:16 2019
+Results reported at Tue Dec 17 23:10:16 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+# this file was automaticly created by mpisubmit.pl script for edu-cmc-skpod19-321-10 #
+source /polusfs/setenv/setup.SMPI
+#BSUB -n 2
+#BSUB -W 00:15
+#BSUB -o size32_n2_out
+#BSUB -e n2_er_size32
+OMP_NUM_THREADS=1 mpiexec test0size32
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.37 sec.
+    Max Memory :                                 1 MB
+    Average Memory :                             1.00 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              1
+    Max Threads :                                1
+    Run time :                                   2 sec.
+    Turnaround time :                            2 sec.
+
+The output (if any) follows:
+
+rk:0, st:0, ls15, nr16 
+it=   1   eps=16.333333
+it=   2   eps=13.692130
+it=   3   eps=11.013069
+it=   4   eps=8.654075
+rk:1, st:16, ls31, nr16 
+it=   5   eps=6.790186
+it=   6   eps=5.366948
+it=   7   eps=5.061956
+it=   8   eps=4.696619
+it=   9   eps=4.305865
+it=  10   eps=3.918842
+it=  11   eps=3.551637
+it=  12   eps=3.212148
+it=  13   eps=2.903317
+it=  14   eps=2.625210
+it=  15   eps=2.462336
+it=  16   eps=2.322338
+it=  17   eps=2.187044
+it=  18   eps=2.057692
+it=  19   eps=1.934992
+it=  20   eps=1.819274
+it=  21   eps=1.753847
+it=  22   eps=1.693531
+it=  23   eps=1.632910
+it=  24   eps=1.572652
+it=  25   eps=1.513265
+it=  26   eps=1.455130
+it=  27   eps=1.398527
+it=  28   eps=1.343652
+it=  29   eps=1.290636
+it=  30   eps=1.239560
+it=  31   eps=1.207859
+it=  32   eps=1.179403
+it=  33   eps=1.150676
+it=  34   eps=1.121870
+it=  35   eps=1.093144
+it=  36   eps=1.064630
+it=  37   eps=1.036436
+it=  38   eps=1.008650
+it=  39   eps=0.981342
+it=  40   eps=0.954567
+it=  41   eps=0.928368
+it=  42   eps=0.902777
+it=  43   eps=0.877819
+it=  44   eps=0.853507
+it=  45   eps=0.829852
+it=  46   eps=0.806857
+it=  47   eps=0.787986
+it=  48   eps=0.772335
+it=  49   eps=0.756841
+it=  50   eps=0.741528
+it=  51   eps=0.726416
+it=  52   eps=0.711524
+it=  53   eps=0.696865
+it=  54   eps=0.682452
+it=  55   eps=0.668292
+it=  56   eps=0.654393
+it=  57   eps=0.640762
+it=  58   eps=0.628675
+it=  59   eps=0.619309
+it=  60   eps=0.609975
+it=  61   eps=0.600686
+it=  62   eps=0.591455
+it=  63   eps=0.582291
+it=  64   eps=0.573205
+it=  65   eps=0.564203
+it=  66   eps=0.555294
+it=  67   eps=0.546483
+it=  68   eps=0.537776
+it=  69   eps=0.529178
+it=  70   eps=0.520691
+it=  71   eps=0.512320
+it=  72   eps=0.504067
+it=  73   eps=0.495935
+it=  74   eps=0.490152
+it=  75   eps=0.484379
+it=  76   eps=0.478619
+it=  77   eps=0.472877
+it=  78   eps=0.467157
+it=  79   eps=0.461466
+it=  80   eps=0.455806
+it=  81   eps=0.450181
+it=  82   eps=0.444596
+it=  83   eps=0.439052
+it=  84   eps=0.433554
+it=  85   eps=0.428102
+it=  86   eps=0.422700
+it=  87   eps=0.417349
+it=  88   eps=0.412052
+it=  89   eps=0.406809
+it=  90   eps=0.401622
+it=  91   eps=0.396491
+it=  92   eps=0.391419
+it=  93   eps=0.386406
+it=  94   eps=0.381452
+it=  95   eps=0.376558
+it=  96   eps=0.371724
+it=  97   eps=0.366951
+it=  98   eps=0.362239
+it=  99   eps=0.358429
+it= 100   eps=0.354776
+  S = 102998.077364
+Total time spent in seconds id 0.027855
+
+
+PS:
+
+Read file <n2_er_size32> for stderr output of this job.
+

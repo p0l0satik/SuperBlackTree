@@ -1,0 +1,118 @@
+Sender: LSF System <lsfadmin@polus-c2-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 531928: <mpiexec ./test0size1800> in cluster <MSUCluster> Exited
+
+Job <mpiexec ./test0size1800> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Wed Dec 18 08:57:10 2019
+Job was executed on host(s) <2*polus-c2-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Wed Dec 18 10:32:43 2019
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10> was used as the home directory.
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10/SuperBlackTree/test0> was used as the working directory.
+Started at Wed Dec 18 10:32:43 2019
+Terminated at Wed Dec 18 11:02:44 2019
+Results reported at Wed Dec 18 11:02:44 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpiexec ./test0size1800
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   3598.69 sec.
+    Max Memory :                                 44616 MB
+    Average Memory :                             44223.14 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                14
+    Run time :                                   1801 sec.
+    Turnaround time :                            7534 sec.
+
+The output (if any) follows:
+
+rk:0, st:0, ls899, nr900 
+rk:1, st:900, ls1799, nr900 
+it=   1   eps=900.333333
+it=   2   eps=787.192130
+it=   3   eps=633.939767
+it=   4   eps=498.830853
+it=   5   eps=391.975674
+it=   6   eps=311.805382
+it=   7   eps=295.236613
+it=   8   eps=274.272829
+it=   9   eps=251.776493
+it=  10   eps=229.443965
+it=  11   eps=208.216198
+it=  12   eps=188.559605
+it=  13   eps=170.652506
+it=  14   eps=154.873527
+it=  15   eps=146.520068
+it=  16   eps=138.316874
+it=  17   eps=130.380968
+it=  18   eps=122.786187
+it=  19   eps=115.575141
+it=  20   eps=109.414530
+it=  21   eps=105.925406
+it=  22   eps=102.361682
+it=  23   eps=98.774921
+it=  24   eps=95.205172
+it=  25   eps=91.683092
+it=  26   eps=88.231733
+it=  27   eps=84.868024
+it=  28   eps=81.604002
+it=  29   eps=78.447816
+it=  30   eps=75.797282
+--------------------------------------------------------------------------
+mpiexec noticed that process rank 0 with PID 0 on node polus-c2-ib exited on signal 12 (User defined signal 2).
+--------------------------------------------------------------------------
+
+
+PS:
+
+Read file <n2_er_size1800> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c1-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 533359: <mpiexec ./test0size1800> in cluster <MSUCluster> Exited
+
+Job <mpiexec ./test0size1800> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Wed Dec 18 21:50:20 2019
+Job was executed on host(s) <2*polus-c1-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Wed Dec 18 21:50:28 2019
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10> was used as the home directory.
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10/SuperBlackTree/test0> was used as the working directory.
+Started at Wed Dec 18 21:50:28 2019
+Terminated at Wed Dec 18 21:50:31 2019
+Results reported at Wed Dec 18 21:50:31 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpiexec ./test0size1800
+------------------------------------------------------------
+
+Exited with exit code 127.
+
+Resource usage summary:
+
+    CPU time :                                   0.02 sec.
+    Max Memory :                                 3 MB
+    Average Memory :                             2.33 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              1
+    Max Threads :                                1
+    Run time :                                   3 sec.
+    Turnaround time :                            11 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <n2_er_size1800> for stderr output of this job.
+

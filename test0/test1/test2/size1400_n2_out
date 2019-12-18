@@ -1,0 +1,153 @@
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 532033: <mpiexec ./test2size1400> in cluster <MSUCluster> Exited
+
+Job <mpiexec ./test2size1400> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Wed Dec 18 08:57:13 2019
+Job was executed on host(s) <2*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Wed Dec 18 15:43:05 2019
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10> was used as the home directory.
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10/SuperBlackTree/test0/test1/test2> was used as the working directory.
+Started at Wed Dec 18 15:43:05 2019
+Terminated at Wed Dec 18 16:13:10 2019
+Results reported at Wed Dec 18 16:13:10 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpiexec ./test2size1400
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   3608.00 sec.
+    Max Memory :                                 21056 MB
+    Average Memory :                             20727.46 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                14
+    Run time :                                   1806 sec.
+    Turnaround time :                            26157 sec.
+
+The output (if any) follows:
+
+rk:0, st:0, ls699, nr700 
+rk:1, st:700, ls1399, nr700 
+it=   1   eps=700.333333
+it=   2   eps=612.192130
+it=   3   eps=493.006125
+it=   4   eps=387.931129
+it=   5   eps=304.829636
+it=   6   eps=242.472158
+it=   7   eps=229.586238
+it=   8   eps=213.282736
+it=   9   eps=195.787663
+it=  10   eps=178.420182
+it=  11   eps=161.911999
+it=  12   eps=146.625791
+it=  13   eps=132.700201
+it=  14   eps=120.423648
+it=  15   eps=113.927821
+it=  16   eps=107.548879
+it=  17   eps=101.377818
+it=  18   eps=95.472048
+it=  19   eps=89.864700
+it=  20   eps=85.070292
+it=  21   eps=82.357180
+it=  22   eps=79.586082
+it=  23   eps=76.797091
+it=  24   eps=74.021344
+it=  25   eps=71.282679
+it=  26   eps=68.599017
+it=  27   eps=65.983523
+it=  28   eps=63.445552
+it=  29   eps=60.991440
+it=  30   eps=58.928172
+it=  31   eps=57.635555
+it=  32   eps=56.317476
+it=  33   eps=54.984741
+it=  34   eps=53.646432
+it=  35   eps=52.310129
+it=  36   eps=50.982117
+it=  37   eps=49.667567
+it=  38   eps=48.370691
+it=  39   eps=47.094881
+it=  40   eps=45.842833
+it=  41   eps=44.616646
+it=  42   eps=43.417916
+it=  43   eps=42.247813
+it=  44   eps=41.107150
+it=  45   eps=39.996436
+it=  46   eps=39.145249
+it=  47   eps=38.400045
+it=  48   eps=37.660230
+it=  49   eps=36.927210
+it=  50   eps=36.202182
+it=  51   eps=35.486158
+it=  52   eps=34.779989
+it=  53   eps=34.084380
+it=  54   eps=33.399912
+it=  55   eps=32.727050
+it=  56   eps=32.066162
+it=  57   eps=31.580753
+it=  58   eps=31.133249
+it=  59   eps=30.686131
+it=  60   eps=30.240139
+it=  61   eps=29.795936
+it=  62   eps=29.354109
+it=  63   eps=28.915180
+it=  64   eps=28.479611
+it=  65   eps=28.047810
+--------------------------------------------------------------------------
+mpiexec noticed that process rank 0 with PID 0 on node polus-c3-ib exited on signal 12 (User defined signal 2).
+--------------------------------------------------------------------------
+
+
+PS:
+
+Read file <n2_er_size1400> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c1-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 533386: <mpiexec ./test2size1400> in cluster <MSUCluster> Exited
+
+Job <mpiexec ./test2size1400> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Wed Dec 18 21:50:21 2019
+Job was executed on host(s) <2*polus-c1-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Wed Dec 18 21:50:53 2019
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10> was used as the home directory.
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10/SuperBlackTree/test0/test1/test2> was used as the working directory.
+Started at Wed Dec 18 21:50:53 2019
+Terminated at Wed Dec 18 21:50:56 2019
+Results reported at Wed Dec 18 21:50:56 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpiexec ./test2size1400
+------------------------------------------------------------
+
+Exited with exit code 127.
+
+Resource usage summary:
+
+    CPU time :                                   0.02 sec.
+    Max Memory :                                 1 MB
+    Average Memory :                             1.00 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              1
+    Max Threads :                                1
+    Run time :                                   4 sec.
+    Turnaround time :                            35 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <n2_er_size1400> for stderr output of this job.
+

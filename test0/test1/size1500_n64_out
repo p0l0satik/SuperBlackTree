@@ -1,0 +1,210 @@
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 531982: <mpiexec ./test1size1500> in cluster <MSUCluster> Done
+
+Job <mpiexec ./test1size1500> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Wed Dec 18 08:57:11 2019
+Job was executed on host(s) <18*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-skpod19-321-10> in cluster <MSUCluster> at Wed Dec 18 13:29:37 2019
+                            <20*polus-c3-ib.bmc.hpc.cs.msu.ru>
+                            <14*polus-c2-ib.bmc.hpc.cs.msu.ru>
+                            <12*polus-c1-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10> was used as the home directory.
+</home_edu/edu-cmc-skpod19-321/edu-cmc-skpod19-321-10/SuperBlackTree/test0/test1> was used as the working directory.
+Started at Wed Dec 18 13:29:37 2019
+Terminated at Wed Dec 18 13:32:02 2019
+Results reported at Wed Dec 18 13:32:02 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpiexec ./test1size1500
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   9179.09 sec.
+    Max Memory :                                 31398 MB
+    Average Memory :                             21754.86 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              70
+    Max Threads :                                212
+    Run time :                                   152 sec.
+    Turnaround time :                            16491 sec.
+
+The output (if any) follows:
+
+rk:10, st:234, ls256, nr24 
+rk:11, st:257, ls280, nr25 
+rk:12, st:281, ls303, nr24 
+rk:13, st:304, ls327, nr25 
+rk:14, st:328, ls350, nr24 
+rk:15, st:351, ls374, nr25 
+rk:16, st:375, ls397, nr24 
+rk:17, st:398, ls420, nr24 
+rk:0, st:0, ls22, nr23 
+rk:1, st:23, ls45, nr24 
+rk:2, st:46, ls69, nr25 
+rk:3, st:70, ls92, nr24 
+rk:4, st:93, ls116, nr25 
+rk:5, st:117, ls139, nr24 
+rk:6, st:140, ls163, nr25 
+rk:7, st:164, ls186, nr24 
+rk:8, st:187, ls209, nr24 
+rk:9, st:210, ls233, nr25 
+rk:38, st:890, ls913, nr25 
+rk:62, st:1453, ls1475, nr24 
+rk:39, st:914, ls936, nr24 
+rk:18, st:421, ls444, nr25 
+rk:63, st:1476, ls1499, nr24 
+rk:40, st:937, ls959, nr24 
+rk:19, st:445, ls467, nr24 
+rk:52, st:1218, ls1241, nr25 
+rk:41, st:960, ls983, nr25 
+rk:20, st:468, ls491, nr25 
+rk:53, st:1242, ls1264, nr24 
+rk:42, st:984, ls1006, nr24 
+rk:21, st:492, ls514, nr24 
+rk:54, st:1265, ls1288, nr25 
+rk:43, st:1007, ls1030, nr25 
+rk:22, st:515, ls538, nr25 
+rk:55, st:1289, ls1311, nr24 
+rk:44, st:1031, ls1053, nr24 
+rk:23, st:539, ls561, nr24 
+rk:56, st:1312, ls1334, nr24 
+rk:45, st:1054, ls1077, nr25 
+rk:24, st:562, ls584, nr24 
+rk:57, st:1335, ls1358, nr25 
+rk:46, st:1078, ls1100, nr24 
+rk:25, st:585, ls608, nr25 
+rk:58, st:1359, ls1381, nr24 
+rk:47, st:1101, ls1124, nr25 
+rk:26, st:609, ls631, nr24 
+rk:59, st:1382, ls1405, nr25 
+rk:48, st:1125, ls1147, nr24 
+rk:27, st:632, ls655, nr25 
+rk:60, st:1406, ls1428, nr24 
+rk:49, st:1148, ls1170, nr24 
+rk:28, st:656, ls678, nr24 
+rk:61, st:1429, ls1452, nr25 
+rk:50, st:1171, ls1194, nr25 
+rk:29, st:679, ls702, nr25 
+rk:51, st:1195, ls1217, nr24 
+rk:30, st:703, ls725, nr24 
+rk:31, st:726, ls749, nr25 
+rk:32, st:750, ls772, nr24 
+rk:33, st:773, ls795, nr24 
+rk:34, st:796, ls819, nr25 
+rk:35, st:820, ls842, nr24 
+rk:36, st:843, ls866, nr25 
+rk:37, st:867, ls889, nr24 
+it=   1   eps=750.333333
+it=   2   eps=655.942130
+it=   3   eps=528.239535
+it=   4   eps=415.656060
+it=   5   eps=326.616145
+it=   6   eps=259.805464
+it=   7   eps=245.998831
+it=   8   eps=228.530259
+it=   9   eps=209.784870
+it=  10   eps=191.176127
+it=  11   eps=173.488048
+it=  12   eps=157.109244
+it=  13   eps=142.188277
+it=  14   eps=129.036118
+it=  15   eps=122.075882
+it=  16   eps=115.240878
+it=  17   eps=108.628605
+it=  18   eps=102.300582
+it=  19   eps=96.292310
+it=  20   eps=91.156351
+it=  21   eps=88.249236
+it=  22   eps=85.279982
+it=  23   eps=82.291548
+it=  24   eps=79.317301
+it=  25   eps=76.382782
+it=  26   eps=73.507196
+it=  27   eps=70.704648
+it=  28   eps=67.985165
+it=  29   eps=65.355534
+it=  30   eps=63.145449
+it=  31   eps=61.760387
+it=  32   eps=60.348036
+it=  33   eps=58.919980
+it=  34   eps=57.485947
+it=  35   eps=56.054061
+it=  36   eps=54.631057
+it=  37   eps=53.222475
+it=  38   eps=51.832828
+it=  39   eps=50.465754
+it=  40   eps=49.124139
+it=  41   eps=47.810233
+it=  42   eps=46.525747
+it=  43   eps=45.271936
+it=  44   eps=44.049668
+it=  45   eps=42.859490
+it=  46   eps=41.947989
+it=  47   eps=41.149464
+it=  48   eps=40.356714
+it=  49   eps=39.571243
+it=  50   eps=38.794335
+it=  51   eps=38.027075
+it=  52   eps=37.270373
+it=  53   eps=36.524988
+it=  54   eps=35.791539
+it=  55   eps=35.070526
+it=  56   eps=34.362344
+it=  57   eps=33.842646
+it=  58   eps=33.363115
+it=  59   eps=32.883998
+it=  60   eps=32.406087
+it=  61   eps=31.930092
+it=  62   eps=31.456642
+it=  63   eps=30.986297
+it=  64   eps=30.519553
+it=  65   eps=30.056846
+it=  66   eps=29.598557
+it=  67   eps=29.145022
+it=  68   eps=28.696529
+it=  69   eps=28.253329
+it=  70   eps=27.815633
+it=  71   eps=27.383623
+it=  72   eps=27.070605
+it=  73   eps=26.772320
+it=  74   eps=26.473734
+it=  75   eps=26.175204
+it=  76   eps=25.877055
+it=  77   eps=25.579584
+it=  78   eps=25.283065
+it=  79   eps=24.987744
+it=  80   eps=24.693848
+it=  81   eps=24.401581
+it=  82   eps=24.111128
+it=  83   eps=23.822659
+it=  84   eps=23.536323
+it=  85   eps=23.252257
+it=  86   eps=22.970583
+it=  87   eps=22.691408
+it=  88   eps=22.414830
+it=  89   eps=22.140933
+it=  90   eps=21.869791
+it=  91   eps=21.601471
+it=  92   eps=21.336026
+it=  93   eps=21.073507
+it=  94   eps=20.813952
+it=  95   eps=20.583309
+it=  96   eps=20.386860
+it=  97   eps=20.191189
+it=  98   eps=19.996387
+it=  99   eps=19.802539
+it= 100   eps=19.609722
+  S = -4563171766388.535156
+Total time spent in seconds id 143.320116
+
+
+PS:
+
+Read file <n64_er_size1500> for stderr output of this job.
+
