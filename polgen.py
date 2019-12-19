@@ -9,5 +9,5 @@ for test in range(3):
         print("mpicc -std=gnu99 mpi{1}.c -o test{0}size{1}".format(test, cur_size))
         for core in cores:
             if (core <= cur_size):
-                print("bsub -q normal -n {2} -W 2:0 -o size{0}_n{2}_out -e n{2}_er_size{0} mpiexec ./test{1}size{0}".format(cur_size,test,  core))
+                print("bsub -q normal -n {2} -W 3:0 -o size{0}_n{2}_out -e n{2}_er_size{0} mpiexec ./test{1}size{0}".format(cur_size,test,  core))
 
