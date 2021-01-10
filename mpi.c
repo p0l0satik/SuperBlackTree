@@ -7,7 +7,7 @@
 
 #define  Max(a,b) ((a)>(b)?(a):(b))
 #define  Min(a,b) ((a)<(b)?(a):(b))
-#define  N   (128)
+#define  N   (256)
 #define  r 2
 double   maxeps = 0.1e-7;
 int itmax = 100;
@@ -37,7 +37,7 @@ int main(int an, char **as)
     if (myrank == 0){
         add = 0;
     } else {
-        add =  startrow - 1;
+        add = startrow - 1;
         if (myrank != ranksize -1){
             nrow +=1;
         }
