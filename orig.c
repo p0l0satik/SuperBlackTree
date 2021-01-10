@@ -45,9 +45,6 @@ void init()
 	        }
         }
     }
-	// if (myrank == r) {
-        
-    // }
 
 } 
 
@@ -96,16 +93,6 @@ void verify()
 	        }
         }
     }
-	// for(int k = 0; k <= N  - 1; k++){
-    //         for(int j = 0; j <= N - 1; j++){
-    //             for(int i = 0; i <=  N - 1; i++){ 
-    //                 printf("%f ", A[k][j][i]);
-    //             }
-    //             printf("\n");
-    //         }
-    //         printf("\n");
-    //         printf("\n");
-    //     }
 	printf("  S = %f\n",s);
 
 }
