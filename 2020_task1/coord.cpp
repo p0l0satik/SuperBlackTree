@@ -14,7 +14,7 @@ int get_next_rank(int my){
 }
 MPI_Request req;
 MPI_Status status;
-
+#define INITIAL_PROC 4
 int main(int an, char **as)
 {
     int start_rank = 4;
@@ -26,9 +26,7 @@ int main(int an, char **as)
     MPI_Barrier(MPI_COMM_WORLD);
 
     ranks_alive[0] = myrank;
-    // MPI_Irecv(&A[0][0][0], N * N, MPI_DOUBLE, myrank - 1, 1215, MPI_COMM_WORLD, &req[0]);
-    // MPI_Isend(&A[1][0][0], N * N, MPI_DOUBLE, myrank - 1, 1216, MPI_COMM_WORLD, &req[1]);
-    if (myrank == 2){
+    if (myrank == INITIAL_PROC){
         MPI_Send(&myrank, 1, MPI_INT, get_next_rank(myrank), 1000, MPI_COMM_WORLD); //Election start
     }
 
@@ -47,7 +45,6 @@ int main(int an, char **as)
                 }
             }
             if (coordinator >= 0){
-                printf("myrank %d", myrank);
                 coordinator = myrank;
                 MPI_Send(&myrank, 1, MPI_INT, get_next_rank(myrank), 2000, MPI_COMM_WORLD); //new coordinator
             } else{
